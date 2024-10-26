@@ -1,0 +1,53 @@
+/* styles.css */
+
+/* Navbar */
+.navbar {
+    background-color: #808080; /* Dark Green */
+}
+
+/* Hero Section */
+body {
+    h1, p {
+    color: white;
+    background-color: rgba(128, 128, 128, 0.5); /* رمادي شفاف */
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7); /* إضافة ظل للصندوق */
+    padding: 10px;
+}
+}
+/* Card Colors */
+.card {
+   .card {
+    border: none;
+    border-radius: 10px;
+    background-color: rgba(128, 128, 128, 0.5); /* خلفية رمادية شفافة */
+}
+}
+
+..card-img-top {
+    position: relative; /* لضبط موقع الصورة */
+    height: 200px; /* يمكنك تحديد ارتفاع ثابت أو استخدام نسبة مئوية */
+    overflow: hidden; /* يخفي الأجزاء الزائدة من الصورة */
+}
+
+.card-img-top img {
+    
+}
+
+/* Buttons */
+.btn-success {
+    background-color: #006400;
+    border-color: #006400;
+}
+
+.btn-success:hover {
+    background-color: #004d00;
+    border-color: #004d00;
+
+/* Responsive Logo Positioning */
+@media (min-width: 992px) {
+    .navbar-brand img {
+        position: absolute;
+        right: 20px;
+        top: 10px;
+    }
+}
