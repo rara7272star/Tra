@@ -1,53 +1,103 @@
 /* styles.css */
-
-/* Navbar */
-.navbar {
-    background-color: #808080; /* Dark Green */
-}
-
-/* Hero Section */
 body {
-    h1, p {
-    color: white;
-    background-color: rgba(128, 128, 128, 0.5); /* رمادي شفاف */
-    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7); /* إضافة ظل للصندوق */
-    padding: 10px;
-}
-}
-/* Card Colors */
-.card {
-   .card {
-    border: none;
-    border-radius: 10px;
-    background-color: rgba(128, 128, 128, 0.5); /* خلفية رمادية شفافة */
-}
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
 }
 
-..card-img-top {
-    position: relative; /* لضبط موقع الصورة */
-    height: 200px; /* يمكنك تحديد ارتفاع ثابت أو استخدام نسبة مئوية */
-    overflow: hidden; /* يخفي الأجزاء الزائدة من الصورة */
+.container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  width: 350px;
+  text-align: center;
 }
 
-.card-img-top img {
-    
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
 }
 
-/* Buttons */
-.btn-success {
-    background-color: #006400;
-    border-color: #006400;
+input[type="text"] {
+  width: 80%;
+  padding: 10px;
+  margin-right: 10px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
 }
 
-.btn-success:hover {
-    background-color: #004d00;
-    border-color: #004d00;
+button {
+  padding: 10px 15px;
+  background-color: #5cb85c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
 
-/* Responsive Logo Positioning */
-@media (min-width: 992px) {
-    .navbar-brand img {
-        position: absolute;
-        right: 20px;
-        top: 10px;
-    }
+button:hover {
+  background-color: #4cae4c;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+li {
+  background-color: #f9f9f9;
+  margin: 10px 0;
+  padding: 15px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s;
+}
+
+li.done {
+  background-color: #d4edda;
+  text-decoration: line-through;
+  color: #6c757d;
+}
+
+li button {
+  background-color: #d9534f;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+li button:hover {
+  background-color: #c9302c;
+}
+
+li:hover {
+  background-color: #f1f1f1;
+}
+
+li .taskText {
+  flex-grow: 1;
+}
+
+.hidden {
+  display: none;
+}
+
+#emptyMessage {
+  font-size: 16px;
+  color: #888;
+  margin-top: 20px;
 }
