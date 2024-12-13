@@ -1,193 +1,24 @@
-<!doctype html>
-<html lang="en"> 
-<head> 
-    <meta charset="UTF-8"> 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <title>Innovative Cultivation Company - Home</title> 
-    <!-- Bootstrap CSS --> 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"> 
-    <!-- Custom CSS --> 
-    <link href="styles.css" rel="stylesheet"> 
-    <style>
-        /* Create a full-page background using the ::before pseudo-element */
-        body::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url('https://i.postimg.cc/vZfwPCpP/images.jpg'); /* Background image link */
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-attachment: fixed; /* Keeps background fixed while scrolling */
-            z-index: -1; /* Ensures the background is behind all content */
-        }
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>قائمة المهام</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>قائمة المهام</h1>
+    <input type="text" id="taskInput" placeholder="أضف مهمة جديدة" />
+    <button id="addTaskButton">أضف مهمة</button>
 
-        /* Ensure body content appears above the background */
-        body {
-            position: relative;
-            z-index: 1; /* Set higher than the background */
-            min-height: 100vh; /* Ensure body covers the full viewport height */
-            margin: 0;
-        }
+    <ul id="taskList">
+      <!-- المهام ستظهر هنا -->
+    </ul>
 
-        /* Optional: Apply transparent backgrounds to sections that need text legibility */
-    
+    <p id="emptyMessage" class="hidden">لا توجد مهام حاليا.</p>
+  </div>
 
-        .navbar {
-            background-color: rgba(0, 100, 0, 0.8); /* Semi-transparent background for the Navbar */
-        }
-
-        /* Latest Products Section */
-        section.bg-light {
-            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent dark background */
-            color: white; /* Make the text color white to contrast with the dark background */
-        }
-
-        .card {
-            background-color: rgba(255, 255, 255, 0.8); /* Keep cards slightly transparent */
-            color: black; /* Maintain readable text inside cards */
-        }
-
-        /* Card Styling */
-        .card {
-            border: none;
-            border-radius: 10px;
-            overflow: hidden;
-        }
-
-        .card-img-top {
-            border-top-left-radius: 10px;
-            border-top-right-radius: 10px;
-            height: auto;
-            width: 100%;
-        }
-
-        .card-body {
-            padding: 20px;
-        }
-
-        /* Buttons */
-        .btn-success {
-            background-color: #006400;
-            border-color: #006400;
-        }
-
-        .btn-success:hover {
-            background-color: #004d00;
-            border-color: #004d00;
-        }
-
-        /* Responsive Logo Positioning */
-        @media (min-width: 992px) {
-            .navbar-brand img {
-                position: absolute;
-                right: 20px;
-                top: 10px;
-            }
-        }
-    </style> 
-</head> 
-<body> 
-    <!-- Navbar --> 
-    <nav class="navbar navbar-expand-lg navbar-dark"> 
-        <div class="container-fluid"> 
-            <a class="navbar-brand mx-auto d-none d-lg-block" href="index.html"> 
-                <h1 class="text-white">Innovative Cultivation Company</h1> 
-            </a> 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> 
-                <span class="navbar-toggler-icon"></span> 
-            </button> 
-            <div class="collapse navbar-collapse justify-content-start" id="navbarNav"> 
-                <ul class="navbar-nav"> 
-                    <li class="nav-item"> 
-                        <a class="nav-link active" aria-current="page" href="index.html">Home</a> 
-                    </li> 
-                    <li class="nav-item"> 
-                        <a class="nav-link" href="about.html">About Us</a> 
-                    </li> 
-                    <li class="nav-item"> 
-                        <a class="nav-link" href="services.html">Services</a> 
-                    </li> 
-                    <li class="nav-item"> 
-                        <a class="nav-link" href="products.html">Products</a> 
-                    </li> 
-                    <li class="nav-item"> 
-                        <a class="nav-link" href="contact.html">Contact Us</a> 
-                    </li> 
-                </ul> 
-            </div> 
-            <a class="navbar-brand " href="index.html"> 
-                <img src="https://i.postimg.cc/dtDQJqfD/Screenshot-20241016-221203-Canva.jpg" alt="Logo" width="40"> 
-            </a> 
-        </div> 
-    </nav> 
-
-    <!-- Hero Section --> 
-    <header class="text-dark text-center py-5"> 
-        <h1 class="display-4">Innovative Cultivation Company</h1> 
-        <p class="lead">Leading the way in agricultural equipment and solutions.</p> 
-    </header> 
-
-    <!-- Introduction Section --> 
-    <section class="container my-5"> 
-        <h2 class="text-center mb-4">Welcome to IC Company</h2> 
-        <p> At IC Company, we are dedicated to providing top-quality agricultural equipment to farmers and agribusinesses. Our mission is to enhance agricultural productivity through innovative solutions and exceptional service. </p> 
-        <p> Our vision is to be the trusted partner for farmers worldwide, driving sustainable and efficient farming practices. </p> 
-    </section> 
-
-    <!-- Latest Products/Offers --> 
-    <section class="py-5"> 
-        <div class="container"> 
-            <h2 class="text-center mb-4">Latest Products</h2> 
-            <div class="row"> 
-                <!-- Product Card 1 --> 
-       <div class="col-md-4 mb-4"> 
-    <div class="card text-center"> 
-        <img src="https://www.benburgess.co.uk/wp-content/uploads/MCC450787001_A-63cac88eed828.jpg" class="card-img-top img-fluid" alt="tractor"> 
-        <div class="card-body"> 
-            <h5 class="card-title">Tractor</h5> 
-            <p class="card-text">High-efficiency tractor suitable for all farming needs.</p> 
-            <a href="products.html" class="btn btn-primary">Buy</a> 
-        </div> 
-    </div> 
-</div>         
-
-                <!-- Product Card 2 --> 
-                <div class="col-md-4"> 
-                    <div class="card"> 
-                        <div class="card-body text-center"> 
-                            <img src="data:image/jpeg;base64,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" class="card-img-top img-fluid" alt="Product 2"> 
-                            <h5 class="card-title">harvestor
-
-</h5> 
-                            <p class="card-text">Advanced harvesting machine for maximum yield.</p> 
-                            <a href="products.html" class="btn btn-primary">Buy</a> 
-                        </div> 
-                    </div> 
-                </div> 
-
-                <!-- Product Card 3 --> 
-                <div class="col-md-4"> 
-                    <div class="card"> 
-                        <div class="card-body text-center"> 
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6fSivj0otiMcR7CFEdnNNTk_Y9Gcq6UazdQ&usqp=CAU" class="card-img-top img-fluid" alt="Product 3"> 
-                            <h5 class="card-title">Plow Moldboard</h5> 
-                            <p class="card-text">Durable plow designed for efficient soil preparation.</p> 
-                            <a href="products.html" class="btn btn-primary">Buy</a> 
-                        </div> 
-                    </div> 
-                </div> 
-            </div> 
-        </div> 
-    </section> 
-     <footer class="text-center py-3"> 
-        <p>© 2024 Innovative Cultivation Company. All rights reserved.</p> 
-    </footer>   
+  <script src="script.js"></script>
 </body>
-    
-    <!-- Bootstrap JS and Custom JS --> 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> 
-                              </html>
+</html>
